@@ -33,26 +33,29 @@ return require("packer").startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 
-    use"stevearc/conform.nvim"
-    use"mfussenegger/nvim-lint"
+	use("stevearc/conform.nvim")
+	use("mfussenegger/nvim-lint")
 
 	use({
 		"hrsh7th/nvim-cmp",
-        requires = { { "hrsh7th/cmp-nvim-lsp" } }
+		requires = { { "hrsh7th/cmp-nvim-lsp" } },
 	})
 
 	use({ "L3MON4D3/LuaSnip", requires = { { "saadparwaiz1/cmp_luasnip" }, { "rafamadriz/friendly-snippets" } } })
 
-    use("github/copilot.vim")
-    use({
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup()
-        end,
-    })
-    use("windwp/nvim-ts-autotag")
-    use("lukas-reineke/indent-blankline.nvim")
+	use("github/copilot.vim")
+	use({
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup()
+		end,
+	})
+
+	use("lewis6991/gitsigns.nvim")
+
+	use("windwp/nvim-ts-autotag")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
