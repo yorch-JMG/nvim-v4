@@ -32,10 +32,9 @@ return require("packer").startup(function(use)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
-	use({
-		"nvimtools/none-ls.nvim",
-		requires = { { "nvimtools/none-ls-extras.nvim" } },
-	})
+
+    use"stevearc/conform.nvim"
+    use"mfussenegger/nvim-lint"
 
 	use({
 		"hrsh7th/nvim-cmp",
