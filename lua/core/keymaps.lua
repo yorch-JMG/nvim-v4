@@ -11,6 +11,12 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.timeoutlen = 300
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
