@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "ts_ls", "astro", "html", "cssls", "tailwindcss", "denols" },
+	ensure_installed = { "lua_ls", "ts_ls", "astro", "html", "cssls", "tailwindcss", "denols", "terraformls" },
 	automatic_installation = true,
 })
 
@@ -25,6 +25,10 @@ lspconfig.ts_ls.setup({
 lspconfig["astro"].setup({
 	capabilities = capabilities,
 	filetypes = { "astro" },
+})
+lspconfig["terraformls"].setup({
+	capabilities = capabilities,
+	filetypes = { "terraform", "hcl" },
 })
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
