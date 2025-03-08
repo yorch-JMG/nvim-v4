@@ -54,7 +54,7 @@ return require("packer").startup(function(use)
 
 	use("lewis6991/gitsigns.nvim")
 	use("sindrets/diffview.nvim")
-	use("NeogitOrg/neogit")
+    use("tpope/vim-fugitive")
 
 	use("windwp/nvim-ts-autotag")
 	use("lukas-reineke/indent-blankline.nvim")
