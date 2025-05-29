@@ -54,10 +54,17 @@ return require("packer").startup(function(use)
 
 	use("lewis6991/gitsigns.nvim")
 	use("sindrets/diffview.nvim")
-    use("tpope/vim-fugitive")
+	use("tpope/vim-fugitive")
 
 	use("windwp/nvim-ts-autotag")
 	use("lukas-reineke/indent-blankline.nvim")
+
+	use({
+		"folke/trouble.nvim",
+		config = function()
+			require("trouble").setup()
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
