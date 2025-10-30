@@ -25,6 +25,10 @@ lspconfig["terraformls"].setup({
 	capabilities = capabilities,
 	filetypes = { "terraform", "hcl" },
 })
+lspconfig["ruff"].setup({
+	capabilities = capabilities,
+	filetypes = { "python" },
+})
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
