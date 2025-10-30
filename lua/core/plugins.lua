@@ -16,7 +16,9 @@ return require("packer").startup(function(use)
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'
-	use("ellisonleao/gruvbox.nvim")
+	use("sainnhe/everforest")
+	use("sainnhe/gruvbox-material")
+	use("projekt0n/github-nvim-theme")
 	use("bluz71/vim-moonfly-colors")
 	use("nvim-tree/nvim-tree.lua")
 	use("nvim-tree/nvim-web-devicons")

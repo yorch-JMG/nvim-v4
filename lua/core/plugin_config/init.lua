@@ -1,3 +1,5 @@
+require("core.plugin_config.everforest")
+require("core.plugin_config.github-theme")
 require("core.plugin_config.gruvbox")
 require("core.plugin_config.moonfly")
 require("core.plugin_config.lualine")
