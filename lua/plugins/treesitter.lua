@@ -25,6 +25,5 @@ return {
 				},
 			})
 		end,
-		run = ":TSUpdate",
 	},
 }
