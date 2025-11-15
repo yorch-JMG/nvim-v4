@@ -6,29 +6,34 @@ require("mason-lspconfig").setup({
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
-lspconfig.angularls.setup({
-	capabilities = capabilities,
-})
-lspconfig.lua_ls.setup({
-	capabilities = capabilities,
-})
-lspconfig["astro"].setup({
-	capabilities = capabilities,
+
+vim.lsp.config("astro", {
 	filetypes = { "astro" },
-})
-lspconfig.ts_ls.setup({
 	capabilities = capabilities,
+})
+
+vim.lsp.config("ts_ls", {
 	root_dir = lspconfig.util.root_pattern("package.json"),
 	single_file_support = false,
-})
-lspconfig["terraformls"].setup({
 	capabilities = capabilities,
+})
+
+vim.lsp.config("terraformls", {
 	filetypes = { "terraform", "hcl" },
-})
-lspconfig["ruff"].setup({
 	capabilities = capabilities,
-	filetypes = { "python" },
 })
+
+vim.lsp.config("ruff", {
+	filetypes = { "python" },
+	capabilities = capabilities,
+})
+
+vim.lsp.enable("angularls")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("astro")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("terraformls")
+vim.lsp.enable("ruff")
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
