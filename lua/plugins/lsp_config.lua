@@ -30,6 +30,21 @@ return {
 				capabilities = capabilities,
 			})
 
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+					},
+				},
+				capabilities = capabilities,
+			})
+
 			vim.lsp.config("ts_ls", {
 				root_dir = lspconfig.util.root_pattern("package.json"),
 				single_file_support = false,

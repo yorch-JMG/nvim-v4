@@ -9,6 +9,11 @@ return {
 		},
 
 		config = function()
+			-- Display diagnostic virtual text
+			vim.diagnostic.config({
+				virtual_text = true,
+			})
+
 			require("luasnip.loaders.from_vscode").lazy_load()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
