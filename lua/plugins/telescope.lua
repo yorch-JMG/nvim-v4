@@ -12,7 +12,7 @@ return {
 			local telescope = require("telescope")
 			telescope.setup({
 				defaults = {
-					file_ignore_patterns = { "node_modules", ".git/" },
+					file_ignore_patterns = { "node_modules", ".git/", ".venv/" },
 				},
 				extensions = {
 					["ui-select"] = {
