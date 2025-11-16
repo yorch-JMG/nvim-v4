@@ -21,11 +21,11 @@ return {
 				-- Conform will run multiple formatters sequentially
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- Conform will run the first available formatter
-				javascript = { "prettierd", "prettier", stop_after_first = true },
-				astro = { "prettierd", "prettier", stop_after_first = true },
-				html = { "prettierd", "prettier", stop_after_first = true },
-				json = { "prettierd", "prettier", stop_after_first = true },
-				css = { "prettierd", "prettier", stop_after_first = true },
+				javascript = { "prettierd", stop_after_first = true },
+				astro = { "prettierd", stop_after_first = true },
+				html = { "prettierd", stop_after_first = true },
+				json = { "prettierd", stop_after_first = true },
+				css = { "prettierd", stop_after_first = true },
 				terraform = { "terraform_fmt" },
 			},
 			default_format_opts = {
