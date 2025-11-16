@@ -35,7 +35,7 @@ vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 400
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
