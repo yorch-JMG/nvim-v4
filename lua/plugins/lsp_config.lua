@@ -18,6 +18,7 @@ return {
 					"tailwindcss",
 					"terraformls",
 					"angularls",
+					"basedpyright",
 				},
 				automatic_installation = true,
 			})
@@ -61,12 +62,18 @@ return {
 				capabilities = capabilities,
 			})
 
+			vim.lsp.config("basedpyright", {
+				filetypes = { "python" },
+				capabilities = capabilities,
+			})
+
 			vim.lsp.enable("angularls")
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("astro")
 			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("terraformls")
 			vim.lsp.enable("ruff")
+			vim.lsp.enable("basedpyright")
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
